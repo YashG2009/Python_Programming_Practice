@@ -1,0 +1,4 @@
+This is a sample text file.
+It contains multiple lines.
+Some lines have lowercase letters.
+This program will copy content to another file converting lowercase to uppercase.

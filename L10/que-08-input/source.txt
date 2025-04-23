@@ -1,0 +1,2 @@
+This is a sample text file. It contains a few words like a, the, and an that should be removed.
+The program will create another text file deleting these words and replacing them with blank spaces.

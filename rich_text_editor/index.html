@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rich Text Editor</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="page">
+    <header class="header">
+      <h1>Rich Text Editor</h1>
+      <p>Create, format, and export styled content directly in your browser.</p>
+    </header>
+
+    <section class="toolbar" aria-label="Editor toolbar">
+      <div class="toolbar-group">
+        <button type="button" data-command="bold" title="Bold"><strong>B</strong></button>
+        <button type="button" data-command="italic" title="Italic"><em>I</em></button>
+        <button type="button" data-command="underline" title="Underline"><span class="underline">U</span></button>
+      </div>
+
+      <div class="toolbar-group">
+        <label>
+          Font
+          <select id="font-family">
+            <option value="Arial">Arial</option>
+            <option value="Georgia">Georgia</option>
+            <option value="Times New Roman">Times New Roman</option>
+            <option value="Verdana">Verdana</option>
+            <option value="Courier New">Courier New</option>
+          </select>
+        </label>
+        <label>
+          Size
+          <select id="font-size">
+            <option value="1">Small</option>
+            <option value="3" selected>Normal</option>
+            <option value="5">Large</option>
+            <option value="7">Huge</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="toolbar-group">
+        <label>
+          Text Color
+          <input type="color" id="text-color" value="#1f2937" />
+        </label>
+        <label>
+          Highlight
+          <input type="color" id="highlight-color" value="#fef08a" />
+        </label>
+      </div>
+
+      <div class="toolbar-group">
+        <button type="button" data-command="justifyleft" title="Align Left">Left</button>
+        <button type="button" data-command="justifycenter" title="Align Center">Center</button>
+        <button type="button" data-command="justifyright" title="Align Right">Right</button>
+        <button type="button" data-command="justifyfull" title="Justify">Justify</button>
+      </div>
+
+      <div class="toolbar-group">
+        <button type="button" data-command="insertunorderedlist" title="Bulleted List">• List</button>
+        <button type="button" data-command="insertorderedlist" title="Numbered List">1. List</button>
+        <button type="button" data-command="outdent" title="Outdent">Outdent</button>
+        <button type="button" data-command="indent" title="Indent">Indent</button>
+      </div>
+
+      <div class="toolbar-group">
+        <button type="button" data-command="undo" title="Undo">Undo</button>
+        <button type="button" data-command="redo" title="Redo">Redo</button>
+      </div>
+
+      <div class="toolbar-group">
+        <button type="button" id="insert-link">Link</button>
+        <button type="button" id="insert-image">Image</button>
+        <button type="button" id="insert-table">Table</button>
+      </div>
+
+      <div class="toolbar-group">
+        <button type="button" id="download-html">Download as HTML</button>
+        <button type="button" id="clear-storage">Clear Autosave</button>
+      </div>
+    </section>
+
+    <section class="editor-wrapper">
+      <div id="editor" contenteditable="true" aria-label="Rich text editor">
+        <h2>Welcome to your editor</h2>
+        <p>Start typing here and format text using the toolbar above.</p>
+        <ul>
+          <li>Highlight text to apply bold, italic, or underline.</li>
+          <li>Change fonts, sizes, and colors from the dropdowns.</li>
+          <li>Insert links, images, or tables with a click.</li>
+        </ul>
+        <p>Everything you type is autosaved locally.</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="editor.js"></script>
+</body>
+</html>
